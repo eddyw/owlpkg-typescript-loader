@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "target": "es5",
+    "module": "commonjs",
+    "removeComments": false,
+    "lib": [
+      "es2015"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "outDir": "lib/",
+    "baseUrl": "src/"
+  },
+  "include": [ "src/*" ],
+  "exclude": [ "node_modules" ]
+}

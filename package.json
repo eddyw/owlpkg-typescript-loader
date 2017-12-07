@@ -1,0 +1,30 @@
+{
+  "name": "webpack-tschecker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --pretty --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eddy Wilson",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/async": "2.0.45",
+    "@types/node": "8.0.56",
+    "@types/webpack": "3.8.1",
+    "happypack": "4.0.0",
+    "thread-loader": "1.1.2",
+    "ts-loader": "^3.2.0",
+    "tslint": "5.8.0",
+    "tslint-language-service": "0.9.7",
+    "typescript": "2.6.2",
+    "webpack": "3.10.0",
+    "webpack-node-externals": "1.6.0"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "loader-utils": "^1.1.0",
+    "schema-utils": "^0.4.2"
+  }
+}
