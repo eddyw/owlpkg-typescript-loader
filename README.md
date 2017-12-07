@@ -8,11 +8,11 @@ A TypeScript loader for Webpack:
 
 ## Install
 ```bash
-npm install --save-dev @owlpkg/typescript-loader
+npm install --save-dev @owlpkg/typescript-loader-loader
 ```
 ## Install with TSLint Support
 ```bash
-npm install --save-dev @owlpkg/typescript-loader tslint tslint-language-service
+npm install --save-dev @owlpkg/typescript-loader-loader tslint tslint-language-service
 ```
 
 ## Usage (with tsconfig.json)
@@ -27,7 +27,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: '@owlpkg/typescript',
+            loader: '@owlpkg/typescript-loader',
             options: {
               tsconfig: './tsconfig.json',
               cache: true
@@ -52,7 +52,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: '@owlpkg/typescript',
+            loader: '@owlpkg/typescript-loader',
             options: {
               jsconfig: './jsconfig.json',
               cache: true
@@ -91,7 +91,7 @@ module.exports = {
       verbose: false,
       loaders: [
         {
-          loader: '@owlpkg/typescript',
+          loader: '@owlpkg/typescript-loader',
           options: {
             tslint: './tslint.json',
             tsconfig: './tsconfig.json',
