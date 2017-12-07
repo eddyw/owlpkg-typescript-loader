@@ -14,7 +14,6 @@ const {
   getMessageFromDiagnostic,
 } = require('./diagnostics')
 
-const enableTsLintLanguageService = require('./TsLintLangService')
 const schema = require('./schema')
 const setupCompilerOptions = require('./setupCompilerOptions')
 const transpiler = require('./transpiler')
@@ -366,6 +365,7 @@ function loader(source, sourceMap, meta) {
     compilerOptions = setupCompilerOptions(typescript, options, loaderName)
 
     if (typeof options.tslint !== 'undefined') {
+      const enableTsLintLanguageService = require('./TsLintLangService')
       enableTsLintLanguageService(typescript, options.tslint)
     }
 
