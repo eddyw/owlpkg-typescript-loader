@@ -2,7 +2,6 @@ const fs = require('fs')
 const { getOptions } = require('loader-utils')
 const path = require('path')
 const validateOptions = require('schema-utils')
-const tslint = require('tslint')
 const ts = require('typescript')
 const util = require('util')
 
@@ -365,15 +364,16 @@ function loader(source, sourceMap, meta) {
     compilerOptions = setupCompilerOptions(typescript, options, loaderName)
 
     if (typeof options.tslint !== 'undefined') {
+      const tslint = require('tslint')
       const enableTsLintLanguageService = require('./TsLintLangService')
       enableTsLintLanguageService(typescript, options.tslint)
-    }
 
-    if (options.tslintFormatter) {
-      const TsLintFormatter = tslint.findFormatter(options.tslintFormatter)
-      if (TsLintFormatter) {
-        const tslintFormatter = new TsLintFormatter()
-        formatter = generateTsLintFormatter(tslintFormatter)
+      if (options.tslintFormatter) {
+        const TsLintFormatter = tslint.findFormatter(options.tslintFormatter)
+        if (TsLintFormatter) {
+          const tslintFormatter = new TsLintFormatter()
+          formatter = generateTsLintFormatter(tslintFormatter)
+        }
       }
     }
 
