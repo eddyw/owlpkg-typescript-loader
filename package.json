@@ -1,6 +1,6 @@
 {
   "name": "@owlpkg/typescript-loader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TypeScript loader for Webpack",
   "main": "lib/index.js",
   "scripts": {
