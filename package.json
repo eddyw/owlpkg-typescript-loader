@@ -36,10 +36,12 @@
     "webpack": "3.10.0",
     "webpack-node-externals": "1.6.0"
   },
+  "optionalDependencies": {
+    "tslint": "^5.8.0",
+    "tslint-language-service": "^0.9.7"
+  },
   "peerDependencies": {
     "webpack": "^2.3.0 || ^3.0.0",
-    "tslint": "^5.8.0",
-    "tslint-language-service": "^0.9.7",
     "typescript": "^2.6.2"
   },
   "dependencies": {
